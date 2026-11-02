@@ -1,0 +1,324 @@
+{
+  "artifacts": {
+    "firmware": {
+      "createdAt": "2026-10-19T12:00:00.000Z",
+      "hash": "1eac90c14b0bf3ec23f45dd77d84c1b25553332ff694489e981c0836d1019bbe",
+      "inputsKey": "478f0fd0370de24f",
+      "sourceRevision": 15
+    }
+  },
+  "breadboard": {
+    "placements": {
+      "cmp_bb": {
+        "rotation": 0,
+        "x": 360,
+        "y": 40
+      },
+      "cmp_d1": {
+        "rotation": 0,
+        "x": 493.4,
+        "y": 74.8
+      },
+      "cmp_r1": {
+        "rotation": 0,
+        "x": 460.8,
+        "y": 91.94999999999999
+      },
+      "cmp_sw1": {
+        "rotation": 0,
+        "x": 120,
+        "y": 280
+      },
+      "cmp_uno": {
+        "rotation": 0,
+        "x": 40,
+        "y": 20
+      }
+    },
+    "unit": "css-px",
+    "wires": {
+      "conn_w_d13": {
+        "color": "orange",
+        "points": []
+      },
+      "conn_w_d2": {
+        "color": "blue",
+        "points": []
+      },
+      "conn_w_gnd": {
+        "color": "black",
+        "points": []
+      },
+      "conn_w_gnd_led": {
+        "color": "black",
+        "points": []
+      },
+      "conn_w_sw_gnd": {
+        "color": "black",
+        "points": []
+      }
+    }
+  },
+  "components": [
+    {
+      "definitionId": "arduino-uno",
+      "definitionVersion": 1,
+      "id": "cmp_uno",
+      "params": {},
+      "refDes": "U1"
+    },
+    {
+      "definitionId": "breadboard-half",
+      "definitionVersion": 1,
+      "id": "cmp_bb",
+      "params": {},
+      "refDes": "BB1"
+    },
+    {
+      "definitionId": "resistor",
+      "definitionVersion": 1,
+      "id": "cmp_r1",
+      "params": {
+        "resistance": 220
+      },
+      "refDes": "R1"
+    },
+    {
+      "definitionId": "led",
+      "definitionVersion": 1,
+      "id": "cmp_d1",
+      "params": {
+        "color": "red"
+      },
+      "refDes": "D1"
+    },
+    {
+      "definitionId": "pushbutton",
+      "definitionVersion": 1,
+      "id": "cmp_sw1",
+      "params": {
+        "color": "green"
+      },
+      "refDes": "SW1"
+    }
+  ],
+  "connections": [
+    {
+      "a": {
+        "componentId": "cmp_r1",
+        "pinId": "1"
+      },
+      "b": {
+        "componentId": "cmp_bb",
+        "pinId": "10c"
+      },
+      "id": "conn_cmp_r1_1",
+      "kind": "contact"
+    },
+    {
+      "a": {
+        "componentId": "cmp_r1",
+        "pinId": "2"
+      },
+      "b": {
+        "componentId": "cmp_bb",
+        "pinId": "16c"
+      },
+      "id": "conn_cmp_r1_2",
+      "kind": "contact"
+    },
+    {
+      "a": {
+        "componentId": "cmp_d1",
+        "pinId": "A"
+      },
+      "b": {
+        "componentId": "cmp_bb",
+        "pinId": "16e"
+      },
+      "id": "conn_cmp_d1_A",
+      "kind": "contact"
+    },
+    {
+      "a": {
+        "componentId": "cmp_d1",
+        "pinId": "C"
+      },
+      "b": {
+        "componentId": "cmp_bb",
+        "pinId": "15e"
+      },
+      "id": "conn_cmp_d1_C",
+      "kind": "contact"
+    },
+    {
+      "a": {
+        "componentId": "cmp_uno",
+        "pinId": "13"
+      },
+      "b": {
+        "componentId": "cmp_bb",
+        "pinId": "10a"
+      },
+      "id": "conn_w_d13",
+      "kind": "wire"
+    },
+    {
+      "a": {
+        "componentId": "cmp_bb",
+        "pinId": "15a"
+      },
+      "b": {
+        "componentId": "cmp_bb",
+        "pinId": "tn.15"
+      },
+      "id": "conn_w_gnd_led",
+      "kind": "wire"
+    },
+    {
+      "a": {
+        "componentId": "cmp_uno",
+        "pinId": "GND.1"
+      },
+      "b": {
+        "componentId": "cmp_bb",
+        "pinId": "tn.1"
+      },
+      "id": "conn_w_gnd",
+      "kind": "wire"
+    },
+    {
+      "a": {
+        "componentId": "cmp_uno",
+        "pinId": "2"
+      },
+      "b": {
+        "componentId": "cmp_sw1",
+        "pinId": "1.l"
+      },
+      "id": "conn_w_d2",
+      "kind": "wire"
+    },
+    {
+      "a": {
+        "componentId": "cmp_sw1",
+        "pinId": "2.r"
+      },
+      "b": {
+        "componentId": "cmp_uno",
+        "pinId": "GND.2"
+      },
+      "id": "conn_w_sw_gnd",
+      "kind": "wire"
+    }
+  ],
+  "createdAt": "2026-10-19T12:00:00.000Z",
+  "customParts": [],
+  "enclosure": null,
+  "firmware": {
+    "core": "arduino:avr@1.8.8",
+    "files": [
+      {
+        "path": "sketch.ino"
+      }
+    ],
+    "fqbn": "arduino:avr:uno",
+    "libraries": [],
+    "mainFile": "sketch.ino"
+  },
+  "id": "prj_hxiwouae7xax",
+  "pcb": {
+    "board": {
+      "height": 40,
+      "width": 50
+    },
+    "layers": 2,
+    "mountingHoles": [],
+    "origin": "board-center",
+    "outline": "custom",
+    "placements": {},
+    "routing": "auto",
+    "traces": [],
+    "unit": "mm",
+    "vias": []
+  },
+  "product": {
+    "analysis": {
+      "battery": {
+        "kind": "usb",
+        "mAh": 2000
+      },
+      "loadCases": [],
+      "resolutionTargetUm": 20,
+      "supports": [],
+      "thermal": {
+        "ambientC": 25,
+        "convection": 10
+      },
+      "tolerances": {}
+    },
+    "bodies": [],
+    "camera": null,
+    "detectors": [],
+    "emitters": [],
+    "focus": null,
+    "models": [],
+    "pcb": {
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "visible": true
+    },
+    "sample": null,
+    "unit": "mm",
+    "vision": {
+      "autofocus": {
+        "command": "F{angle}\n",
+        "max": 180,
+        "min": 0,
+        "step": 15
+      },
+      "focusMetric": "laplacian",
+      "measure": {
+        "invert": false,
+        "maxAreaUm2": 20000,
+        "minAreaUm2": 4,
+        "split": true,
+        "threshold": "otsu"
+      },
+      "model": null
+    }
+  },
+  "revision": 15,
+  "schemaVersion": 7,
+  "schematic": {
+    "placements": {},
+    "unit": "grid",
+    "wires": {}
+  },
+  "simulation": {
+    "circuit": {
+      "scope": {
+        "channels": [],
+        "timePerDiv": 0.001,
+        "voltsPerDiv": 1
+      },
+      "speed": 1
+    },
+    "clockHz": 16000000,
+    "engine": "avr8js",
+    "engineVersion": "0.21.1",
+    "speed": 1
+  },
+  "title": "Botao LED",
+  "updatedAt": "2026-10-19T12:00:00.000Z"
+}
